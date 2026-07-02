@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Networking & Outreach Engine — Interview Season: Finance</title>
+<meta name="description" content="Find alumni, send outreach that gets replies, run a coffee chat that converts, and follow up on a cadence that leads to a referral.">
+<link rel="stylesheet" href="styles/fonts.css">
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/networking.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div id="nav-root"></div>
+
+<main id="main">
+
+  <section class="shell section" style="padding-top: var(--sp-12)">
+    <div class="section-head">
+      <h1 style="font-size: var(--text-display-l)">Networking & Outreach Engine</h1>
+      <p class="body-l" style="margin-top: var(--sp-3)">For most students — especially non-targets — a referral from a real conversation opens more doors than another application. This is that process, systematized: find, reach, chat, follow up, track.</p>
+    </div>
+
+    <div class="section-head">
+      <h2>Find</h2>
+      <p>Build a target list before you send a single message.</p>
+    </div>
+    <ol class="source-list">
+      <li><span class="source-list__index mono">01</span><span>Search LinkedIn for <strong>"[your school] + works at [firm]"</strong> — alumni two-plus years out are more likely to reply than someone your exact age.</span></li>
+      <li><span class="source-list__index mono">02</span><span>Use your school's career center alumni database — most have one, and it's underused, which means less competition for replies.</span></li>
+      <li><span class="source-list__index mono">03</span><span>Check your school's LinkedIn "Alumni" tool, filtered by target firm and industry — it surfaces people the search bar misses.</span></li>
+      <li><span class="source-list__index mono">04</span><span>Attend firm-hosted info sessions and virtual events — note names of anyone who speaks, they're pre-warmed for outreach.</span></li>
+      <li><span class="source-list__index mono">05</span><span>Log every name in the Contacts tab of your tracker the moment you find them — a list that only lives in your head evaporates.</span></li>
+    </ol>
+  </section>
+
+  <section class="shell section" id="reach-out" style="padding-top:0">
+    <div class="section-head">
+      <h2>Reach out</h2>
+      <p>These are the messages that actually get replies — a cold email, a LinkedIn note, a thank-you, and a referral ask — because a specific message gets answered and a mass-blasted one gets ignored. Pick one, fill in the fields, copy, and send.</p>
+    </div>
+
+    <div class="accordion-list">
+
+      <div class="accordion-card prompt-card is-expanded" id="reach-cold-email" data-prompt-id="cold-alumni-email">
+        <div class="accordion-card__header">
+          <button class="accordion-card__toggle" type="button" aria-expanded="true" aria-controls="reach-cold-email-panel">
+            <span class="accordion-card__chevron"></span>
+            <span class="accordion-card__meta">
+              <span class="accordion-card__title">Cold Alumni Email</span>
+              <span class="accordion-card__desc">A first message to someone you haven't met — short, specific, and easy to say yes to.</span>
+            </span>
+          </button>
+          <button class="copy-btn" type="button"></button>
+        </div>
+        <div class="accordion-card__panel" id="reach-cold-email-panel">
+          <div class="accordion-card__panel-inner">
+            <div class="prompt-card__fields"></div>
+            <div class="prompt-card__body"></div>
+            <script type="text/plain" class="prompt-card__template">Subject: {{school}} student — quick question about {{firm}}
+
+Hi {{contactName}},
+
+I'm a student at {{school}} studying {{major}}, and I saw you're on the {{team}} team at {{firm}} — I'm exploring a career in the industry and would love to hear a bit about your path there.
+
+Would you have 15 minutes in the next couple of weeks for a quick call? Happy to work around your schedule.
+
+Thanks either way,
+{{yourName}}</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-card prompt-card" id="reach-linkedin" data-prompt-id="linkedin-note">
+        <div class="accordion-card__header">
+          <button class="accordion-card__toggle" type="button" aria-expanded="false" aria-controls="reach-linkedin-panel">
+            <span class="accordion-card__chevron"></span>
+            <span class="accordion-card__meta">
+              <span class="accordion-card__title">LinkedIn Connection Note</span>
+              <span class="accordion-card__desc">A shorter version built for LinkedIn's connection-request character limit.</span>
+            </span>
+          </button>
+          <button class="copy-btn" type="button"></button>
+        </div>
+        <div class="accordion-card__panel" id="reach-linkedin-panel">
+          <div class="accordion-card__panel-inner">
+            <div class="prompt-card__fields"></div>
+            <div class="prompt-card__body"></div>
+            <script type="text/plain" class="prompt-card__template">Hi {{contactName}} — fellow {{school}} grad here, studying {{major}} and exploring {{firm}}. Would love to connect and hear about your path if you're open to it.</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-card prompt-card" id="reach-thankyou" data-prompt-id="thank-you">
+        <div class="accordion-card__header">
+          <button class="accordion-card__toggle" type="button" aria-expanded="false" aria-controls="reach-thankyou-panel">
+            <span class="accordion-card__chevron"></span>
+            <span class="accordion-card__meta">
+              <span class="accordion-card__title">Post-Coffee-Chat Thank You</span>
+              <span class="accordion-card__desc">Send within a day of any chat — references something specific so it doesn't read as automated.</span>
+            </span>
+          </button>
+          <button class="copy-btn" type="button"></button>
+        </div>
+        <div class="accordion-card__panel" id="reach-thankyou-panel">
+          <div class="accordion-card__panel-inner">
+            <div class="prompt-card__fields"></div>
+            <div class="prompt-card__body"></div>
+            <script type="text/plain" class="prompt-card__template">Subject: Thank you, {{contactName}}
+
+Hi {{contactName}},
+
+Thank you for taking the time today — I really appreciated hearing about {{specificDetail}}. It gave me a much clearer picture of what the day-to-day actually looks like.
+
+I'll {{nextStep}}, and I'll keep you posted. Thanks again for your time.
+
+Best,
+{{yourName}}</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-card prompt-card" id="reach-referral" data-prompt-id="referral-ask">
+        <div class="accordion-card__header">
+          <button class="accordion-card__toggle" type="button" aria-expanded="false" aria-controls="reach-referral-panel">
+            <span class="accordion-card__chevron"></span>
+            <span class="accordion-card__meta">
+              <span class="accordion-card__title">Referral Ask</span>
+              <span class="accordion-card__desc">Send once your application is actually live — direct, and easy for them to decline without awkwardness.</span>
+            </span>
+          </button>
+          <button class="copy-btn" type="button"></button>
+        </div>
+        <div class="accordion-card__panel" id="reach-referral-panel">
+          <div class="accordion-card__panel-inner">
+            <div class="prompt-card__fields"></div>
+            <div class="prompt-card__body"></div>
+            <script type="text/plain" class="prompt-card__template">Subject: Applying to {{firm}} — quick favor
+
+Hi {{contactName}},
+
+I just submitted my application for the {{role}} position at {{firm}} — {{applicationDetail}}. Given our conversation about {{specificDetail}}, I wanted to ask if you'd feel comfortable referring me internally, or passing my resume to the right person on your team.
+
+No pressure at all if the timing isn't right — either way, thank you for everything so far.
+
+Best,
+{{yourName}}</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-card prompt-card" id="reach-personalize" data-prompt-id="personalize-outreach">
+        <div class="accordion-card__header">
+          <button class="accordion-card__toggle" type="button" aria-expanded="false" aria-controls="reach-personalize-panel">
+            <span class="accordion-card__chevron"></span>
+            <span class="accordion-card__meta">
+              <span class="accordion-card__title">Personalize Any Template</span>
+              <span class="accordion-card__desc">Feed it any template above plus what you know about the recipient — it rewrites it to sound like you, not a form letter.</span>
+            </span>
+          </button>
+          <button class="copy-btn" type="button"></button>
+        </div>
+        <div class="accordion-card__panel" id="reach-personalize-panel">
+          <div class="accordion-card__panel-inner">
+            <div class="prompt-card__fields"></div>
+            <div class="prompt-card__body"></div>
+            <script type="text/plain" class="prompt-card__template">Here is an outreach template I want to send, plus what I know about the recipient. Rewrite it to sound specific and personal — not templated — while keeping it under 120 words. Don't invent facts about them I haven't given you.
+
+TEMPLATE
+{{template}}
+
+WHAT I KNOW ABOUT THEM
+{{recipientDetails}}</script>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="shell section" style="padding-top:0">
+    <div class="section-head">
+      <h2>Chat</h2>
+      <p>20-30 minutes, mostly them talking. The goal is a real conversation, not an interrogation.</p>
+    </div>
+    <div class="dodont-grid">
+      <div class="dodont is-do">
+        <h4>Do</h4>
+        <ul>
+          <li>Come with 3-4 specific questions about their path, not "any advice for me?"</li>
+          <li>Ask about their actual day-to-day, not just how they landed the job.</li>
+          <li>Let them talk — aim for roughly 70/30, them to you.</li>
+          <li>End by asking who else they'd suggest you speak with.</li>
+        </ul>
+      </div>
+      <div class="dodont is-dont">
+        <h4>Don't</h4>
+        <ul>
+          <li>Ask for a referral in the first conversation.</li>
+          <li>Ask anything a 30-second search would answer.</li>
+          <li>Run over the time you asked for.</li>
+          <li>Make it purely transactional — show real interest in their path.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: var(--sp-12)">
+      <h3>Questions worth asking</h3>
+    </div>
+    <ul class="source-list">
+      <li><span class="source-list__index mono">—</span><span>What does a typical week look like for you at [firm]?</span></li>
+      <li><span class="source-list__index mono">—</span><span>What made you choose [firm] over other offers you had?</span></li>
+      <li><span class="source-list__index mono">—</span><span>What's something about the desk or group that surprised you once you were actually in it?</span></li>
+      <li><span class="source-list__index mono">—</span><span>In your view, what separates a strong first-year analyst from an average one?</span></li>
+      <li><span class="source-list__index mono">—</span><span>Is there anyone else you'd suggest I speak with?</span></li>
+    </ul>
+  </section>
+
+  <section class="shell section" style="padding-top:0">
+    <div class="section-head">
+      <h2>Follow up</h2>
+      <p>The cadence is what turns one good conversation into a referral — most students stop after the thank-you note.</p>
+    </div>
+    <div class="cadence">
+      <div class="cadence__step">
+        <span class="cadence__when">DAY 0</span>
+        <span class="cadence__what">Coffee chat</span>
+        <span class="cadence__desc">The conversation happens.</span>
+      </div>
+      <div class="cadence__step">
+        <span class="cadence__when">DAY 1</span>
+        <span class="cadence__what">Thank-you note</span>
+        <span class="cadence__desc">Reference one specific thing they said — proves you were listening.</span>
+      </div>
+      <div class="cadence__step">
+        <span class="cadence__when">WEEK 2-3</span>
+        <span class="cadence__what">Value touch</span>
+        <span class="cadence__desc">Share something relevant, or a short update on your own progress.</span>
+      </div>
+      <div class="cadence__step">
+        <span class="cadence__when">WEEK 5-6</span>
+        <span class="cadence__what">Referral ask</span>
+        <span class="cadence__desc">Direct and low-pressure, once your application is actually live.</span>
+      </div>
+      <div class="cadence__step">
+        <span class="cadence__when">ONGOING</span>
+        <span class="cadence__what">Close the loop</span>
+        <span class="cadence__desc">Tell them the outcome either way — this is who you become a known quantity to.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell section" style="padding-top:0">
+    <div class="sheet-callout">
+      <div class="sheet-callout__text">
+        <h4>Track</h4>
+        <p>Every contact you find, every chat you run, and every follow-up due date lives in the Contacts tab of your tracker — not in your memory or a screenshot folder.</p>
+      </div>
+      <a class="label sheet-callout__link" href="index.html#tracker-setup">See Start Here for the tracker setup <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<script src="scripts/icons.js"></script>
+<script src="scripts/state.js"></script>
+<script src="scripts/toast.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/accordion.js"></script>
+<script>
+  ISF.renderNav('networking');
+  ISF.initPromptCards();
+  ISF.initPromptHints();
+  ISF.initAccordion();
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    btn.innerHTML = ISF.icon('copy') + '<span>Copy</span>';
+  });
+</script>
+</body>
+</html>

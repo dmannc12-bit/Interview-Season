@@ -1,0 +1,211 @@
+/* ====================================================================
+   Scroll chapters. Five deliberate beats: Hero, Scorecard, Getting
+   Started (steps 1+2 as one thought), Tracker, Final CTA. Each chapter
+   owns its own padding-block so it reads as a complete pause, not a
+   stacked block — the gap between chapters is never an add-on, it's
+   built into the chapter that's ending and the one that's starting.
+   ==================================================================== */
+
+/* ---------------------------------- chapter 1: hero ---------------------------------- */
+.welcome {
+  text-align: center;
+  padding-block: var(--sp-32) clamp(var(--sp-32), 10vw, var(--sp-40));
+  max-width: 720px;
+  margin-inline: auto;
+}
+.welcome__mark {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: var(--sp-4);
+}
+.welcome h1 { margin-bottom: var(--sp-8); }
+.welcome p.body-l { margin-inline: auto; color: var(--ink-muted); line-height: 1.65; }
+.welcome__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--sp-6);
+  margin-top: var(--sp-16);
+  flex-wrap: wrap;
+}
+.welcome__microcopy {
+  margin-top: var(--sp-6);
+  font-size: 0.8125rem;
+  color: var(--ink-faint);
+}
+
+/* ---------------------------------- chapter 2: the scorecard reveal ---------------------------------- */
+.trust-preview {
+  max-width: var(--app-max);
+  padding-block: clamp(var(--sp-32), 9vw, var(--sp-40)) clamp(var(--sp-40), 10vw, var(--sp-48));
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.trust-preview__card {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: left;
+}
+.trust-preview__card .demo-frame__body { padding: var(--sp-8); }
+.trust-preview__caption {
+  margin-top: var(--sp-8);
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+}
+
+/* ---------------------------------- chapter 3: getting started (steps 1 + 2, one thought) ---------------------------------- */
+.onboard-chapter {
+  padding-block: clamp(var(--sp-32), 9vw, var(--sp-48));
+  border-top: 1px solid var(--line);
+}
+.onboard-lead {
+  max-width: var(--app-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+  margin-bottom: var(--sp-8);
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+/* Steps grouped in one chapter shed their own outer padding — the
+   chapter wrapper owns the outer pause. A hairline still separates
+   step 1 from step 2, same weight as every other divider on the page,
+   just with a lighter gap around it since both belong to one chapter. */
+.onboard-chapter .onboard-step {
+  border-top: none;
+  padding-block: 0;
+}
+.onboard-chapter .onboard-step + .onboard-step {
+  margin-top: var(--sp-16);
+  padding-top: var(--sp-16);
+  border-top: 1px solid var(--line);
+}
+
+/* ---------------------------------- chapter 4 + 5: tracker / final CTA (standalone steps) ---------------------------------- */
+.onboard-step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--sp-8);
+  max-width: var(--app-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+  padding-block: clamp(var(--sp-32), 9vw, var(--sp-48));
+  border-top: 1px solid var(--line);
+}
+/* The final CTA is the deliberate exhale — shorter than its neighbors,
+   on purpose, so the page ends calm instead of trailing off. */
+#ready {
+  padding-block: clamp(var(--sp-24), 8vw, var(--sp-40));
+}
+.onboard-step__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-strong);
+  background: var(--surface-1);
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  align-self: start;
+}
+.onboard-step__title { margin-bottom: var(--sp-4); font-size: clamp(1.375rem, 2vw, 1.75rem); }
+.onboard-step__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  flex-wrap: wrap;
+}
+.onboard-step__title-row .onboard-step__title { margin-bottom: 0; }
+.onboard-step__tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  padding: 3px 8px;
+}
+.onboard-step__body p { color: var(--ink-muted); margin-bottom: var(--sp-4); max-width: 60ch; }
+.onboard-step__body p:last-child { margin-bottom: 0; }
+.onboard-step__aside {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  max-width: 60ch;
+  margin-top: var(--sp-8);
+  margin-bottom: 0;
+}
+.onboard-step__aside + .onboard-step__aside { margin-top: var(--sp-3); }
+
+@media (max-width: 640px) {
+  .onboard-step { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .onboard-step__num { width: 32px; height: 32px; font-size: 0.8125rem; }
+}
+
+.lesson-tips {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-6);
+  margin-top: var(--sp-6);
+}
+.lesson-tip {
+  background: var(--surface-1);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  opacity: 0;
+  translate: 0 14px;
+  transition: transform var(--dur-standard) var(--ease-out-quart),
+              border-color var(--dur-standard) var(--ease-out-quart),
+              background-color var(--dur-standard) var(--ease-out-quart),
+              opacity 480ms var(--ease-out-expo),
+              translate 480ms var(--ease-out-expo);
+}
+.onboard-step.is-visible .lesson-tip {
+  opacity: 1;
+  translate: 0 0;
+}
+.onboard-step.is-visible .lesson-tip:nth-child(2) { transition-delay: 70ms; }
+.onboard-step.is-visible .lesson-tip:nth-child(3) { transition-delay: 140ms; }
+.onboard-step.is-visible .lesson-tip:nth-child(4) { transition-delay: 210ms; }
+.lesson-tip:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in oklch, var(--line-strong) 60%, var(--signal));
+  background: var(--surface-2);
+}
+.lesson-tip strong { display: block; margin-bottom: var(--sp-3); font-size: 0.9375rem; }
+.lesson-tip span { color: var(--ink-muted); font-size: 0.875rem; line-height: 1.6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-tip { transition: none; opacity: 1; translate: 0 0; }
+}
+
+.tracker-steps {
+  list-style: none;
+  margin: var(--sp-4) 0 0;
+  padding: 0;
+  counter-reset: tracker-step;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.tracker-steps li {
+  counter-increment: tracker-step;
+  display: flex;
+  gap: var(--sp-3);
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.tracker-steps li::before {
+  content: counter(tracker-step);
+  font-family: var(--font-mono);
+  color: var(--signal);
+  flex-shrink: 0;
+}
